@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    /* Warm parchment #F3EDE3 */
+    --background: 0.94 0.015 75;
+    /* Deep brown #2A1A14 */
+    --foreground: 0.22 0.032 45;
+    /* Card cream */
+    --card: 0.97 0.01 75;
+    --card-foreground: 0.22 0.032 45;
+    --popover: 0.97 0.01 75;
+    --popover-foreground: 0.22 0.032 45;
+    /* Terracotta #B24A2E */
+    --primary: 0.52 0.148 35;
+    --primary-foreground: 0.97 0.01 75;
+    /* Light cream */
+    --secondary: 0.91 0.03 72;
+    --secondary-foreground: 0.22 0.032 45;
+    /* Muted warm */
+    --muted: 0.89 0.02 70;
+    /* Warm gray-brown #6A564B */
+    --muted-foreground: 0.46 0.025 42;
+    /* Accent terracotta hover */
+    --accent: 0.57 0.148 38;
+    --accent-foreground: 0.97 0.01 75;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.85 0.02 70;
+    --input: 0.88 0.02 70;
+    --ring: 0.52 0.148 35;
+    /* Cuisine card colors */
+    --cuisine-1: 0.47 0.13 32;
+    --cuisine-2: 0.57 0.15 42;
+    --cuisine-3: 0.34 0.09 28;
+    --cuisine-4: 0.54 0.135 40;
+    /* Footer dark maroon #5B1F17 */
+    --footer-bg: 0.28 0.085 25;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.94 0.015 75;
+    --sidebar-foreground: 0.22 0.032 45;
+    --sidebar-primary: 0.52 0.148 35;
+    --sidebar-primary-foreground: 0.97 0.01 75;
+    --sidebar-accent: 0.89 0.02 70;
+    --sidebar-accent-foreground: 0.22 0.032 45;
+    --sidebar-border: 0.85 0.02 70;
+    --sidebar-ring: 0.52 0.148 35;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+  .cuisine-card-1 {
+    background-color: oklch(var(--cuisine-1));
+  }
+  .cuisine-card-2 {
+    background-color: oklch(var(--cuisine-2));
+  }
+  .cuisine-card-3 {
+    background-color: oklch(var(--cuisine-3));
+  }
+  .cuisine-card-4 {
+    background-color: oklch(var(--cuisine-4));
+  }
+  .footer-bg {
+    background-color: oklch(var(--footer-bg));
+  }
+}
